@@ -3,3 +3,4 @@ RUN npm install socket.io
 RUN npm install express
 COPY ./run-signaling-server.sh /run-signaling-server.sh
 COPY ./signaling-server.js /signaling-server.js
+ENTRYPOINT [ "sh", "/run-signaling-server.sh" ]
