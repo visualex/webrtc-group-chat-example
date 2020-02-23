@@ -9,9 +9,15 @@ services:
         command: [ "sh", "/run-signaling-server.sh" ]
         # command: "/run-signaling-server.sh"
 
+    turn-server:
+        image: bprodoehl/turnserver
+        ports:
+          - "3478:3478"
+          - "3478:3478/udp"
 
     reverse-proxy:
         ports:
           - 443:443
         build:
             context: reverse-proxy
+
