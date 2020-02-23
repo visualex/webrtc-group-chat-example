@@ -8,6 +8,7 @@ services:
         build:
             context: signaling-server
         # command: "/run-signaling-server.sh"
+         command: ["tail", "-f", "/dev/null"]
 
 
     static-file-server:
