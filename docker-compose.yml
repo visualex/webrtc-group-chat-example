@@ -7,8 +7,8 @@ services:
         - 8080:8080
         build:
             context: signaling-server
-   # command: "/run-signaling-server.sh"
-     command: ["tail", "-f", "/dev/null"]
+        command: ["tail", "-f", "/dev/null"]
+        # command: "/run-signaling-server.sh"
 
 
     static-file-server:
