@@ -7,5 +7,4 @@ RUN echo copy sh
 COPY ./run-signaling-server.sh /run-signaling-server.sh
 RUN echo copy js
 COPY ./signaling-server.js /signaling-server.js
-#RUN echo set entrypoint
-#ENTRYPOINT [ "sh", "/run-signaling-server.sh" ]
+COPY ./index.html /index.html

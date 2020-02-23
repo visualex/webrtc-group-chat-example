@@ -3,8 +3,6 @@ version: "3"
 services:
 
     signaling-server:
-        ports:
-        - 8080:8080
         build:
             context: signaling-server
 #        command: ["tail", "-f", "/dev/null"]
@@ -12,8 +10,8 @@ services:
         # command: "/run-signaling-server.sh"
 
 
-    static-file-server:
+    reverse-proxy:
         ports:
-        - 1984:80
+          - 443:443
         build:
-            context: static-file-server
+            context: reverse-proxy

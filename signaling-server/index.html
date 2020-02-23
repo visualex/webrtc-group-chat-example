@@ -11,8 +11,8 @@
                 background-color: #333; 
             }
             video {
-                width:  320px;
-                height:  240px;
+                width:  640px;
+                height:  480px;
                 border:  1px solid black;
             }
         </style>
@@ -20,8 +20,8 @@
         <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
         <script>
             /** CONFIG **/
-            var SIGNALING_SERVER = "http://" + window.location.hostname + ":8080/";
-            // var SIGNALING_SERVER = "http://localhost/";
+            var SIGNALING_SERVER = "https://" + window.location.hostname;
+
             var USE_AUDIO = true;
             var USE_VIDEO = true;
             var DEFAULT_CHANNEL = 'some-global-channel-name';
